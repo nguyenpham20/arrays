@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [10, 2, 3, 4, 5, 6, 7, 8, 9, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+        var max  = array[0];
+        var min = array[0];
+        var sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum += array[i];
+            if (max < array[i]) {
+                max = array[i];
+            }
+            if (min > array[i]) {
+                min = array[i];
+            }
+        }
+        document.write("số lớn nhất trong mảng là: " + max);
+        document.write("<br>");
+        document.write("số nhỏ nhất trong mảng là: " + min);
+        document.write("<br>");
+        document.write("số trung bình trong mảng là: " + sum/array.length);
+    </script>
+</body>
+
+</html>
