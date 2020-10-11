@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [
+            {
+                id: "T3HXX1",
+                firstName: "NgAN",
+                lastName: "Duong Thuy"
+            },
+            {
+                id: "T3HXX2",
+                firstName: "Ha",
+                lastName: "Do Thi Thu"
+            },
+            {
+                id: "T3HXX5",
+                firstName: "miNh",
+                lastName: "Nguyen Nhat"
+            }
+        ]
+        /* document.write(students[i].firstName); */
+
+        function titleCase(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                var convertToArray = arr[i].firstName.toLowerCase().split(' ');
+                var result = convertToArray.map(function (val) {
+                    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+                });
+
+            }
+            return result.join(' ');
+
+        }
+        document.write(titleCase(students));
+    </script>
+</body>
+</html>
